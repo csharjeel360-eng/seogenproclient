@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="">
+  <defs>
+    <linearGradient id="t1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#t1)"/>
+  <text x="48" y="88" fill="rgba(255,255,255,0.92)" font-family="system-ui,Segoe UI,sans-serif" font-size="22" font-weight="600">Outlook</text>
+  <text x="48" y="148" fill="#fff" font-family="system-ui,Segoe UI,sans-serif" font-size="34" font-weight="800">SEO trends</text>
+  <text x="48" y="198" fill="rgba(255,255,255,0.9)" font-family="system-ui,Segoe UI,sans-serif" font-size="20">AI search, CWV &amp; structured data</text>
+  <polyline points="420,320 480,240 540,280 600,180 660,200 720,120" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

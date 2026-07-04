@@ -1,0 +1,8 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="120" rx="24" fill="#0F172A"/>
+  <path d="M32 42H88" stroke="#38BDF8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M32 62H88" stroke="#A78BFA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M32 82H88" stroke="#F472B6" stroke-width="8" stroke-linecap="round"/>
+  <rect x="24" y="22" width="72" height="76" rx="18" fill="rgba(255,255,255,0.08)"/>
+  <text x="60" y="110" dominant-baseline="middle" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#E2E8F0">Schema</text>
+</svg>

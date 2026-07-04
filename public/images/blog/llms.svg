@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="">
+  <defs>
+    <linearGradient id="l1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="50%" stop-color="#9333ea"/>
+      <stop offset="100%" stop-color="#c026d3"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#l1)"/>
+  <text x="48" y="88" fill="rgba(255,255,255,0.92)" font-family="system-ui,Segoe UI,sans-serif" font-size="22" font-weight="600">AI &amp; web</text>
+  <text x="48" y="148" fill="#fff" font-family="system-ui,Segoe UI,sans-serif" font-size="36" font-weight="800">llms.txt</text>
+  <text x="48" y="198" fill="rgba(255,255,255,0.9)" font-family="system-ui,Segoe UI,sans-serif" font-size="20">Signals for assistants &amp; training policies</text>
+  <ellipse cx="580" cy="240" rx="140" ry="100" fill="rgba(255,255,255,0.12)"/>
+  <path d="M520 260 Q580 140 660 260" stroke="rgba(255,255,255,0.45)" stroke-width="4" fill="none"/>
+</svg>
