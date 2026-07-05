@@ -8,17 +8,17 @@ export async function GET() {
 SEO Generator Pro helps website owners and marketers create the files that search engines and AI crawlers use to discover and understand site content.
 
 ## Main Pages
-- [Home](https://seogenpro.com/)
-- [Robots.txt Generator](https://seogenpro.com/robots-generator)
-- [Sitemap.xml Generator](https://seogenpro.com/sitemap-generator)
-- [LLMS.txt Generator](https://seogenpro.com/llms-generator)
-- [Crawl Audit](https://seogenpro.com/crawl-audit)
+- [Home](https://seogenpro.online/)
+- [Robots.txt Generator](https://seogenpro.online/robots-generator)
+- [Sitemap.xml Generator](https://seogenpro.online/sitemap-generator)
+- [LLMS.txt Generator](https://seogenpro.online/llms-generator)
+- [Crawl Audit](https://seogenpro.online/crawl-audit)
 
 ## Resources
-- [Documentation](https://seogenpro.com/documentation)
-- [Blog](https://seogenpro.com/blog)
-- [FAQ](https://seogenpro.com/faq)
-- [Contact](https://seogenpro.com/contact)
+- [Documentation](https://seogenpro.online/documentation)
+- [Blog](https://seogenpro.online/blog)
+- [FAQ](https://seogenpro.online/faq)
+- [Contact](https://seogenpro.online/contact)
 `
 
   return new NextResponse(content, {

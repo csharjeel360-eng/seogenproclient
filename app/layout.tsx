@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://seogenpro.com'),
+  metadataBase: new URL('https://seogenpro.online'),
   icons: {
     icon: '/icon.svg',
     shortcut: '/icon.svg',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Free Robots.txt, Sitemap.xml & LLMS.txt Generators — AI Crawlability Audit',
     description: 'Generate robots.txt, create SEO-friendly sitemap.xml, and audit AI crawlability. Free tools to improve Google indexing and AI visibility.',
-    url: 'https://seogenpro.com',
+    url: 'https://seogenpro.online',
     siteName: 'SeogenPro',
     images: [
       {
@@ -94,8 +94,8 @@ export default function RootLayout({
                 {
                   "@type": "Organization",
                   "name": "SeogenPro",
-                  "url": "https://seogenpro.com",
-                  "logo": "https://seogenpro.com/logo.png",
+                  "url": "https://seogenpro.online",
+                  "logo": "https://seogenpro.online/logo.png",
                   "sameAs": [
                     "https://www.facebook.com/seogenpro",
                     "https://twitter.com/seogenpro",
@@ -104,23 +104,23 @@ export default function RootLayout({
                 },
                 {
                   "@type": "WebSite",
-                  "url": "https://seogenpro.com",
+                  "url": "https://seogenpro.online",
                   "name": "SeogenPro",
                   "potentialAction": {
                     "@type": "SearchAction",
-                    "target": "https://seogenpro.com/?s={search_term_string}",
+                    "target": "https://seogenpro.online/?s={search_term_string}",
                     "query-input": "required name=search_term_string"
                   }
                 },
                 {
                   "@type": "WebPage",
-                  "url": "https://seogenpro.com",
+                  "url": "https://seogenpro.online",
                   "name": "SeogenPro",
                   "description": "SeogenPro — AI-powered SEO tools for robots.txt, sitemap generation, crawl auditing, and LLMS.txt creation.",
                   "isPartOf": {
                     "@type": "WebSite",
                     "name": "SeogenPro",
-                    "url": "https://seogenpro.com"
+                    "url": "https://seogenpro.online"
                   },
                   "breadcrumb": {
                     "@type": "BreadcrumbList",
@@ -129,25 +129,25 @@ export default function RootLayout({
                         "@type": "ListItem",
                         "position": 1,
                         "name": "Home",
-                        "item": "https://seogenpro.com"
+                        "item": "https://seogenpro.online"
                       },
                       {
                         "@type": "ListItem",
                         "position": 2,
                         "name": "Robots.txt Generator",
-                        "item": "https://seogenpro.com/robots-generator"
+                        "item": "https://seogenpro.online/robots-generator"
                       },
                       {
                         "@type": "ListItem",
                         "position": 3,
                         "name": "Sitemap Generator",
-                        "item": "https://seogenpro.com/sitemap-generator"
+                        "item": "https://seogenpro.online/sitemap-generator"
                       },
                       {
                         "@type": "ListItem",
                         "position": 4,
                         "name": "Crawl Audit",
-                        "item": "https://seogenpro.com/crawl-audit"
+                        "item": "https://seogenpro.online/crawl-audit"
                       }
                     ]
                   }
@@ -155,7 +155,7 @@ export default function RootLayout({
                 {
                   "@type": "SoftwareApplication",
                   "name": "Robots.txt Generator",
-                  "url": "https://seogenpro.com/robots-generator",
+                  "url": "https://seogenpro.online/robots-generator",
                   "applicationCategory": "WebApplication",
                   "operatingSystem": "Web",
                   "description": "Generate optimized robots.txt files for search engines and AI crawlers."
@@ -163,7 +163,7 @@ export default function RootLayout({
                 {
                   "@type": "SoftwareApplication",
                   "name": "Sitemap Generator",
-                  "url": "https://seogenpro.com/sitemap-generator",
+                  "url": "https://seogenpro.online/sitemap-generator",
                   "applicationCategory": "WebApplication",
                   "operatingSystem": "Web",
                   "description": "Build modern sitemap XML files and manage site URL discovery for SEO."
@@ -171,7 +171,7 @@ export default function RootLayout({
                 {
                   "@type": "SoftwareApplication",
                   "name": "LLMS.txt Generator",
-                  "url": "https://seogenpro.com/llms-generator",
+                  "url": "https://seogenpro.online/llms-generator",
                   "applicationCategory": "WebApplication",
                   "operatingSystem": "Web",
                   "description": "Create llms.txt documentation for AI crawlers and data access policies."
@@ -179,7 +179,7 @@ export default function RootLayout({
                 {
                   "@type": "SoftwareApplication",
                   "name": "Crawl Audit",
-                  "url": "https://seogenpro.com/crawl-audit",
+                  "url": "https://seogenpro.online/crawl-audit",
                   "applicationCategory": "WebApplication",
                   "operatingSystem": "Web",
                   "description": "Audit website crawlability, broken links, robots rules, and indexability issues."

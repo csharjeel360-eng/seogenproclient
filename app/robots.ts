@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/', '/admin/'],
       },
     ],
-    sitemap: ['https://seogenpro.com/sitemap.xml'],
+    sitemap: ['https://seogenpro.online/sitemap.xml'],
   }
 }
