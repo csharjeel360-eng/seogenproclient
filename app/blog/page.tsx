@@ -2,94 +2,91 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Calendar, User, ArrowRight, Sparkles } from 'lucide-react'
+import { Calendar, User, ArrowRight, Sparkles, BookOpen } from 'lucide-react'
 import { BLOG_POSTS } from '@/lib/blog-posts'
 
 export default function BlogPage() {
   const [featured, ...rest] = BLOG_POSTS
 
   return (
-    <div className="min-h-screen pt-24 pb-20 px-4 bg-gray-50 dark:bg-gray-950">
-      <div className="max-w-6xl mx-auto">
-        {/* Enhanced Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center bg-gradient-to-r from-blue-600/10 to-purple-600/10 dark:from-blue-600/20 dark:to-purple-600/20 px-4 py-2 rounded-full text-sm font-medium text-blue-700 dark:text-blue-300 mb-6 border border-blue-200 dark:border-blue-800">
-            <Sparkles className="w-4 h-4 mr-2" />
-            SEO & AI Insights Hub
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.15),_transparent_35%),linear-gradient(135deg,_rgba(248,250,252,1)_0%,_rgba(241,245,249,1)_100%)] pt-24 pb-20 px-4 dark:bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.24),_transparent_35%),linear-gradient(135deg,_rgba(2,6,23,1)_0%,_rgba(15,23,42,1)_100%)]">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-blue-600 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+      >
+        Skip to content
+      </a>
+
+      <main id="main-content" className="mx-auto flex max-w-7xl flex-col">
+        <section className="relative overflow-hidden rounded-[2rem] border border-gray-200/80 bg-white/80 px-6 py-10 shadow-[0_24px_80px_-24px_rgba(15,23,42,0.25)] backdrop-blur-sm sm:px-8 lg:px-12 lg:py-16 dark:border-gray-800 dark:bg-gray-900/80">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(59,130,246,0.18),_transparent_35%)]" aria-hidden="true" />
+          <div className="relative text-center">
+            <div className="mb-6 inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700 dark:border-blue-800 dark:bg-blue-950/40 dark:text-blue-300">
+              <Sparkles className="mr-2 h-4 w-4" />
+              SEO & AI Insights Hub
+            </div>
+
+            <h1 className="mx-auto max-w-4xl text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl lg:text-6xl dark:text-white">
+              Practical guidance for modern
+              <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                discoverability and growth
+              </span>
+            </h1>
+
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-600 sm:text-xl dark:text-gray-300">
+              Explore clear, expert-led articles on technical SEO, crawler rules, AI visibility, and sustainable content strategy.
+            </p>
+
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { value: '50+', label: 'In-depth guides' },
+                { value: '2026', label: 'Latest trends' },
+                { value: 'AI', label: 'Focused content' },
+                { value: 'Free', label: 'Expert knowledge' },
+              ].map((item) => (
+                <div key={item.label} className="rounded-2xl border border-gray-200/70 bg-white/80 px-4 py-5 shadow-sm dark:border-gray-800 dark:bg-gray-950/70">
+                  <div className="text-2xl font-semibold text-blue-600 dark:text-blue-400">{item.value}</div>
+                  <div className="mt-1 text-sm text-gray-600 dark:text-gray-400">{item.label}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+              <Link
+                href="#featured"
+                className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 px-7 py-3.5 font-semibold text-white shadow-lg shadow-blue-600/20 transition hover:-translate-y-0.5 hover:from-blue-700 hover:to-purple-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-950"
+              >
+                Explore latest insights
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/documentation"
+                className="inline-flex items-center justify-center rounded-2xl border border-gray-300 px-7 py-3.5 font-semibold text-gray-700 transition hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 dark:focus-visible:ring-offset-gray-950"
+              >
+                <BookOpen className="mr-2 h-5 w-5" />
+                View documentation
+              </Link>
+            </div>
           </div>
+        </section>
 
-          <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
-            Master
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              {' '}
-              SEO & AI
-            </span>
-            <br />
-            <span className="text-3xl lg:text-4xl font-semibold text-gray-600 dark:text-gray-400">
-              Technical Excellence
-            </span>
-          </h1>
-
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Dive deep into advanced SEO strategies, AI crawler management, technical optimization,
-            and cutting-edge tactics that drive real results. From robots.txt mastery to LLM integration,
-            get the insights you need to stay ahead.
-          </p>
-
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto mb-10">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-1">50+</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">In-depth Guides</div>
+        <section id="featured" aria-labelledby="featured-title" className="mt-16">
+          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600 dark:text-blue-400">Featured</p>
+              <h2 id="featured-title" className="mt-2 flex items-center text-2xl font-semibold text-gray-950 dark:text-white">
+                <Sparkles className="mr-3 h-6 w-6 text-amber-500" />
+                Featured article
+              </h2>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-1">2026</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Latest Trends</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 mb-1">AI</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Focused Content</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-green-600 dark:text-green-400 mb-1">Free</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Expert Knowledge</div>
-            </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="#featured"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-            >
-              <ArrowRight className="w-5 h-5 mr-2" />
-              Explore Latest Insights
-            </Link>
-            <Link
-              href="/documentation"
-              className="inline-flex items-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300"
-            >
-              <Sparkles className="w-5 h-5 mr-2" />
-              View Documentation
-            </Link>
-          </div>
-        </div>
-
-        {/* Featured Post Section */}
-        <div id="featured" className="mb-16">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
-              <Sparkles className="w-6 h-6 mr-3 text-amber-500" />
-              Featured Article
-            </h2>
-            <div className="text-sm text-gray-500 dark:text-gray-400 flex items-center">
-              <Calendar className="w-4 h-4 mr-1" />
+            <p className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+              <Calendar className="mr-2 h-4 w-4" />
               Updated weekly
-            </div>
+            </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden shadow-xl ring-1 ring-gray-200/80 dark:ring-gray-800 bg-white dark:bg-gray-900">
-            <div className="relative aspect-[800/450] lg:aspect-video bg-gray-900">
+          <div className="grid overflow-hidden rounded-[1.75rem] border border-gray-200/80 bg-white shadow-[0_18px_60px_-24px_rgba(15,23,42,0.25)] dark:border-gray-800 dark:bg-gray-900 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="relative aspect-[800/450] bg-gray-900 lg:aspect-video">
               <Image
                 src={featured.image}
                 alt={`Cover image for: ${featured.title}`}
@@ -99,128 +96,139 @@ export default function BlogPage() {
                 priority
                 unoptimized
               />
-              <div className="absolute top-4 left-4 bg-white/95 dark:bg-gray-950/95 backdrop-blur px-3 py-1 rounded-full text-sm font-medium text-gray-800 dark:text-gray-200 flex items-center gap-1 shadow-sm">
-                <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+              <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-white/95 px-3 py-1 text-sm font-medium text-gray-800 shadow-sm dark:bg-gray-950/95 dark:text-gray-200">
+                <Sparkles className="h-3.5 w-3.5 text-amber-500" />
                 Featured
               </div>
             </div>
-            <div className="p-8 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-blue-600 via-blue-700 to-purple-700 text-white">
-              <span className="bg-white/15 w-fit px-3 py-1 rounded-full text-sm mb-4">{featured.category}</span>
-              <h2 className="text-2xl sm:text-3xl lg:text-[1.85rem] font-bold leading-snug mb-4">{featured.title}</h2>
-              <p className="text-blue-100 mb-8 leading-relaxed">{featured.excerpt}</p>
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-blue-50/95 text-sm mb-8">
+            <div className="flex flex-col justify-center bg-gradient-to-br from-blue-600 via-blue-700 to-purple-700 p-8 text-white lg:p-10">
+              <span className="mb-4 w-fit rounded-full bg-white/15 px-3 py-1 text-sm font-medium">{featured.category}</span>
+              <h3 className="text-2xl font-semibold leading-snug sm:text-3xl">{featured.title}</h3>
+              <p className="mt-4 text-base leading-7 text-blue-50">{featured.excerpt}</p>
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-blue-50/95">
                 <span className="flex items-center">
-                  <User className="w-4 h-4 mr-2 opacity-90" />
+                  <User className="mr-2 h-4 w-4" />
                   {featured.author}
                 </span>
                 <span className="flex items-center">
-                  <Calendar className="w-4 h-4 mr-2 opacity-90" />
+                  <Calendar className="mr-2 h-4 w-4" />
                   {new Date(featured.date).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric',
                   })}
                 </span>
-                <span className="text-blue-100/90">{featured.readTime}</span>
+                <span>{featured.readTime}</span>
               </div>
               <Link
                 href={`/blog/${featured.slug}`}
-                className="inline-flex items-center w-fit bg-white text-blue-700 px-6 py-3 rounded-xl font-semibold hover:bg-blue-50 transition-colors shadow-md"
+                className="mt-8 inline-flex w-fit items-center rounded-2xl bg-white px-6 py-3 font-semibold text-blue-700 shadow-md transition hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70"
               >
                 Read article
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
           </div>
-        </div>
+        </section>
 
-        {/* Latest Posts Section */}
-        <div className="mb-16">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center">
-              <Sparkles className="w-6 h-6 mr-3 text-blue-600" />
-              Latest Posts
-            </h2>
+        <section id="latest-posts" aria-labelledby="latest-posts-title" className="mt-16">
+          <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600 dark:text-blue-400">Library</p>
+              <h2 id="latest-posts-title" className="mt-2 flex items-center text-2xl font-semibold text-gray-950 dark:text-white">
+                <BookOpen className="mr-3 h-6 w-6 text-blue-600" />
+                Latest posts
+              </h2>
+            </div>
             <Link
-              href="/blog"
-              className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium text-sm flex items-center"
+              href="#latest-posts"
+              className="inline-flex items-center text-sm font-medium text-blue-600 transition hover:text-blue-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-50 dark:text-blue-400 dark:hover:text-blue-300 dark:focus-visible:ring-offset-gray-950"
             >
               View all posts
-              <ArrowRight className="w-4 h-4 ml-1" />
+              <ArrowRight className="ml-1 h-4 w-4" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ul className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
             {rest.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-                <article className="h-full bg-white dark:bg-gray-900 rounded-xl shadow-md ring-1 ring-gray-200/80 dark:ring-gray-800 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-                  <div className="relative aspect-[800/450] bg-gray-200 dark:bg-gray-800">
-                    <Image
-                      src={post.image}
-                      alt={`Cover image for: ${post.title}`}
-                      fill
-                      className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      unoptimized
-                    />
-                    <div className="absolute top-3 left-3 bg-white/95 dark:bg-gray-950/90 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-gray-800 dark:text-gray-100 shadow-sm">
-                      {post.category}
+              <li key={post.slug} className="list-none">
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="group flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-gray-200/80 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-gray-800 dark:bg-gray-900 dark:focus-visible:ring-offset-gray-950"
+                >
+                  <article className="flex h-full flex-col">
+                    <div className="relative aspect-[800/450] bg-gray-200 dark:bg-gray-800">
+                      <Image
+                        src={post.image}
+                        alt={`Cover image for: ${post.title}`}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        unoptimized
+                      />
+                      <div className="absolute left-3 top-3 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-gray-800 shadow-sm dark:bg-gray-950/90 dark:text-gray-100">
+                        {post.category}
+                      </div>
                     </div>
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <div className="flex items-center text-xs text-gray-500 dark:text-gray-400 mb-3">
-                      <Calendar className="w-3.5 h-3.5 mr-1" />
-                      {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-                      <span className="mx-2 opacity-60">•</span>
-                      {post.readTime}
+                    <div className="flex flex-1 flex-col p-6">
+                      <div className="mb-3 flex items-center text-xs text-gray-500 dark:text-gray-400">
+                        <Calendar className="mr-1 h-3.5 w-3.5" />
+                        {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                        <span className="mx-2 opacity-60">•</span>
+                        {post.readTime}
+                      </div>
+                      <h3 className="text-lg font-semibold leading-snug text-gray-950 transition-colors group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400">
+                        {post.title}
+                      </h3>
+                      <p className="mt-3 flex-1 text-sm leading-7 text-gray-600 dark:text-gray-400">
+                        {post.excerpt}
+                      </p>
+                      <div className="mt-5 flex items-center justify-between border-t border-gray-100 pt-4 dark:border-gray-800">
+                        <span className="flex items-center text-xs text-gray-500 dark:text-gray-400">
+                          <User className="mr-1 h-3.5 w-3.5" />
+                          {post.author}
+                        </span>
+                        <span className="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400">
+                          Read
+                          <ArrowRight className="ml-1 h-4 w-4 transition group-hover:translate-x-0.5" />
+                        </span>
+                      </div>
                     </div>
-                    <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-snug">
-                      {post.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3 flex-1">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between mt-auto pt-2 border-t border-gray-100 dark:border-gray-800">
-                      <span className="flex items-center text-xs text-gray-500 dark:text-gray-400">
-                        <User className="w-3.5 h-3.5 mr-1" />
-                        {post.author}
-                      </span>
-                      <span className="text-blue-600 dark:text-blue-400 text-sm font-medium flex items-center">
-                        Read
-                        <ArrowRight className="w-4 h-4 ml-0.5 group-hover:translate-x-0.5 transition-transform" />
-                      </span>
-                    </div>
-                  </div>
-                </article>
-              </Link>
+                  </article>
+                </Link>
+              </li>
             ))}
-          </div>
-        </div>
+          </ul>
+        </section>
 
-        <div className="mt-16 bg-white dark:bg-gray-900 rounded-2xl p-10 md:p-12 text-center ring-1 ring-gray-200 dark:ring-gray-800 shadow-inner">
-          <h2 className="text-2xl md:text-3xl font-bold mb-3 text-gray-900 dark:text-white">Subscribe</h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto text-sm md:text-base">
-            Get crawling and AI-discoverability notes when new guides ship. No spam—we send rare, high-signal updates.
-          </p>
-          <form className="max-w-lg mx-auto flex flex-col sm:flex-row gap-3" onSubmit={(e) => e.preventDefault()}>
-            <label htmlFor="blog-email" className="sr-only">
-              Email
-            </label>
-            <input
-              id="blog-email"
-              type="email"
-              placeholder="you@company.com"
-              className="flex-1 px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-white placeholder:text-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
-            />
-            <button
-              type="submit"
-              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-colors shrink-0"
-            >
-              Join
-            </button>
-          </form>
-        </div>
-      </div>
+        <section className="mt-16 rounded-[1.75rem] border border-gray-200/80 bg-gradient-to-br from-gray-950 via-blue-950 to-slate-900 p-8 text-white shadow-[0_18px_60px_-24px_rgba(15,23,42,0.4)] sm:p-10 lg:p-12" aria-labelledby="newsletter-title">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 id="newsletter-title" className="text-2xl font-semibold sm:text-3xl">
+              Stay ahead of the curve
+            </h2>
+            <p className="mt-4 text-base leading-7 text-slate-300 sm:text-lg">
+              Get high-signal updates with practical notes on crawling, indexing, AI visibility, and thoughtful content planning.
+            </p>
+            <form className="mt-8 flex flex-col gap-3 sm:flex-row" onSubmit={(e) => e.preventDefault()}>
+              <label htmlFor="blog-email" className="sr-only">
+                Email address
+              </label>
+              <input
+                id="blog-email"
+                type="email"
+                placeholder="you@company.com"
+                className="flex-1 rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-white placeholder:text-slate-400 outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-400"
+              />
+              <button
+                type="submit"
+                className="rounded-2xl bg-white px-7 py-3 font-semibold text-blue-700 transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/60"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
     </div>
   )
 }
