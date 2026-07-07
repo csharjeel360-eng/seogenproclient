@@ -87,6 +87,7 @@ export default function RootLayout({
         {/* End Google Tag Manager */}
 
         <meta name="google-site-verification" content="lzAJ81Xob8zLqzbn-Kn5yWpG2M9zyD1yR8LJOpWDZkE" />
+        <meta name="msvalidate.01" content="67245BF246BB1B327993A151BCE35CAB" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
