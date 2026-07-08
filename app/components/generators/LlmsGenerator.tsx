@@ -84,13 +84,13 @@ export default function LlmsGenerator() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto p-6">
+    <div className="max-w-6xl mx-auto p-4 sm:p-6">
       <div className="bg-white rounded-xl shadow-lg overflow-hidden">
         {/* Tabs */}
         <div className="flex border-b">
           <button
             onClick={() => setActiveTab('form')}
-            className={`flex-1 px-6 py-4 text-center font-medium transition-colors ${
+            className={`flex-1 px-4 sm:px-6 py-4 text-center font-medium transition-colors ${
               activeTab === 'form'
                 ? 'bg-blue-50 text-blue-600 border-b-2 border-blue-600'
                 : 'text-gray-600 hover:text-gray-900'
@@ -102,7 +102,7 @@ export default function LlmsGenerator() {
           {generatedContent && (
             <button
               onClick={() => setActiveTab('preview')}
-              className={`flex-1 px-6 py-4 text-center font-medium transition-colors ${
+              className={`flex-1 px-4 sm:px-6 py-4 text-center font-medium transition-colors ${
                 activeTab === 'preview'
                   ? 'bg-blue-50 text-blue-600 border-b-2 border-blue-600'
                   : 'text-gray-600 hover:text-gray-900'
@@ -114,7 +114,7 @@ export default function LlmsGenerator() {
           )}
         </div>
 
-        <div className="p-8">
+        <div className="p-4 sm:p-8">
           <AnimatePresence mode="wait">
             {activeTab === 'form' ? (
               <motion.form
@@ -215,7 +215,7 @@ export default function LlmsGenerator() {
                 exit={{ opacity: 0, y: -20 }}
                 className="space-y-4"
               >
-                <div className="flex gap-3">
+                <div className="flex flex-wrap gap-3">
                   <button
                     onClick={copyToClipboard}
                     className="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
