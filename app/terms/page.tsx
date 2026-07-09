@@ -1,3 +1,9 @@
+export const metadata = {
+  title: 'Terms of Service — SEO Gen Pro',
+  description: 'Read the SEO Gen Pro Terms of Service governing use of our tools and services.',
+  alternates: { canonical: 'https://seogenpro.online/terms' },
+}
+
 export default function TermsPage() {
   return (
     <main className="container mx-auto px-4 py-16">

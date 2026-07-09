@@ -281,9 +281,9 @@ Allow: /private/public-announcements/</code></pre>
   },
   {
     slug: 'llms-txt-guide',
-    title: 'What is llms.txt and why teams publish it alongside robots',
+    title: "What Is llms.txt? The Complete Beginner's Guide (2026)",
     excerpt:
-      'Understand how llms-style disclosures complement robots.txt—training intent, attribution, and contact without replacing legal terms.',
+      'Learn what llms.txt is, why it matters for AI search, and how to create an effective llms.txt file for your site.',
     author: 'sharjeel',
     date: '2026-01-05',
     readTime: '14 min read',

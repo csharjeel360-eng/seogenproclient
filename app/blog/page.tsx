@@ -1,9 +1,14 @@
-'use client'
-
 import Link from 'next/link'
-import Image from 'next/image'
 import { Calendar, User, ArrowRight, Sparkles, BookOpen } from 'lucide-react'
 import { BLOG_POSTS } from '@/lib/blog-posts'
+import NewsletterForm from '@/components/NewsletterForm'
+
+export const metadata = {
+  title: 'What Is llms.txt? — SEO Gen Pro Blog',
+  description:
+    'Practical guide to llms.txt: what it is, why it matters for AI search, and how to create a clear, site-level llms.txt file.',
+  alternates: { canonical: 'https://seogenpro.online/blog' },
+}
 
 export default function BlogPage() {
   const [featured, ...rest] = BLOG_POSTS
@@ -85,27 +90,12 @@ export default function BlogPage() {
             </p>
           </div>
 
-          <div className="grid overflow-hidden rounded-[1.75rem] border border-gray-200/80 bg-white shadow-[0_18px_60px_-24px_rgba(15,23,42,0.25)] dark:border-gray-800 dark:bg-gray-900 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="relative aspect-[800/450] bg-gray-900 lg:aspect-video">
-              <Image
-                src={featured.image}
-                alt={`Cover image for: ${featured.title}`}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
-                unoptimized
-              />
-              <div className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-white/95 px-3 py-1 text-sm font-medium text-gray-800 shadow-sm dark:bg-gray-950/95 dark:text-gray-200">
-                <Sparkles className="h-3.5 w-3.5 text-amber-500" />
-                Featured
-              </div>
-            </div>
-            <div className="flex flex-col justify-center bg-gradient-to-br from-blue-600 via-blue-700 to-purple-700 p-8 text-white lg:p-10">
-              <span className="mb-4 w-fit rounded-full bg-white/15 px-3 py-1 text-sm font-medium">{featured.category}</span>
-              <h3 className="text-2xl font-semibold leading-snug sm:text-3xl">{featured.title}</h3>
-              <p className="mt-4 text-base leading-7 text-blue-50">{featured.excerpt}</p>
-              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-blue-50/95">
+          <div className="grid overflow-hidden rounded-[1.75rem] border border-gray-200/80 bg-white shadow-[0_18px_60px_-24px_rgba(15,23,42,0.25)] dark:border-gray-800 dark:bg-gray-900 lg:grid-cols-[1fr_1fr]">
+            <div className="p-10 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-blue-50 to-white dark:from-blue-900 dark:to-gray-900">
+              <span className="mb-3 inline-flex items-center rounded-full bg-blue-100/70 px-3 py-1 text-sm font-medium text-blue-800 dark:bg-blue-800/30 dark:text-blue-200">{featured.category}</span>
+              <h3 className="text-2xl font-semibold leading-snug sm:text-3xl text-gray-900 dark:text-white">{featured.title}</h3>
+              <p className="mt-4 text-base leading-7 text-gray-700 dark:text-gray-300">{featured.excerpt}</p>
+              <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <span className="flex items-center">
                   <User className="mr-2 h-4 w-4" />
                   {featured.author}
@@ -122,11 +112,21 @@ export default function BlogPage() {
               </div>
               <Link
                 href={`/blog/${featured.slug}`}
-                className="mt-8 inline-flex w-fit items-center rounded-2xl bg-white px-6 py-3 font-semibold text-blue-700 shadow-md transition hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70"
+                className="mt-8 inline-flex w-fit items-center rounded-2xl bg-blue-600 px-6 py-3 font-semibold text-white shadow-md transition hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500/40"
               >
                 Read article
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
+            </div>
+            <div className="p-8 lg:p-12 flex items-center justify-center">
+              <div className="w-full max-w-md rounded-2xl border border-gray-100 bg-gradient-to-br from-white to-blue-50 p-6 text-gray-900 shadow-sm dark:border-gray-800 dark:bg-gradient-to-br dark:from-gray-900 dark:to-blue-950">
+                <h4 className="text-sm font-medium text-blue-600">Featured summary</h4>
+                <p className="mt-3 text-sm text-gray-700 dark:text-gray-300">This article explains what <strong>llms.txt</strong> is, why it matters for AI search, and how teams can publish clear site-level guidance to improve AI-sourced summaries and attribution.</p>
+                <Link href={`/blog/${featured.slug}`} className="mt-6 inline-flex items-center text-sm font-semibold text-blue-600">
+                  Continue reading
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -154,20 +154,13 @@ export default function BlogPage() {
               <li key={post.slug} className="list-none">
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="group flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-gray-200/80 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-gray-800 dark:bg-gray-900 dark:focus-visible:ring-offset-gray-950"
+                  className="group flex h-full flex-col overflow-hidden rounded-[1.25rem] border border-gray-200/70 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-gray-800 dark:bg-gray-900 dark:focus-visible:ring-offset-gray-950"
                 >
                   <article className="flex h-full flex-col">
-                    <div className="relative aspect-[800/450] bg-gray-200 dark:bg-gray-800">
-                      <Image
-                        src={post.image}
-                        alt={`Cover image for: ${post.title}`}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        unoptimized
-                      />
-                      <div className="absolute left-3 top-3 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-gray-800 shadow-sm dark:bg-gray-950/90 dark:text-gray-100">
-                        {post.category}
+                    <div className="flex h-36 items-center justify-center rounded-t-[1.25rem] bg-gradient-to-br from-blue-50 to-white dark:from-blue-900 dark:to-indigo-900">
+                      <div className="text-center px-4">
+                        <div className="mb-2 inline-flex items-center rounded-full bg-blue-100/60 px-3 py-1 text-xs font-semibold text-blue-700 dark:bg-blue-800/30 dark:text-blue-200">{post.category}</div>
+                        <h3 className="mt-2 text-lg font-semibold text-gray-900 dark:text-white">{post.title}</h3>
                       </div>
                     </div>
                     <div className="flex flex-1 flex-col p-6">
@@ -177,12 +170,7 @@ export default function BlogPage() {
                         <span className="mx-2 opacity-60">•</span>
                         {post.readTime}
                       </div>
-                      <h3 className="text-lg font-semibold leading-snug text-gray-950 transition-colors group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400">
-                        {post.title}
-                      </h3>
-                      <p className="mt-3 flex-1 text-sm leading-7 text-gray-600 dark:text-gray-400">
-                        {post.excerpt}
-                      </p>
+                      <p className="mt-1 flex-1 text-sm leading-7 text-gray-600 dark:text-gray-400">{post.excerpt}</p>
                       <div className="mt-5 flex items-center justify-between border-t border-gray-100 pt-4 dark:border-gray-800">
                         <span className="flex items-center text-xs text-gray-500 dark:text-gray-400">
                           <User className="mr-1 h-3.5 w-3.5" />
@@ -209,23 +197,7 @@ export default function BlogPage() {
             <p className="mt-4 text-base leading-7 text-slate-300 sm:text-lg">
               Get high-signal updates with practical notes on crawling, indexing, AI visibility, and thoughtful content planning.
             </p>
-            <form className="mt-8 flex flex-col gap-3 sm:flex-row" onSubmit={(e) => e.preventDefault()}>
-              <label htmlFor="blog-email" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="blog-email"
-                type="email"
-                placeholder="you@company.com"
-                className="flex-1 rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-white placeholder:text-slate-400 outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-400"
-              />
-              <button
-                type="submit"
-                className="rounded-2xl bg-white px-7 py-3 font-semibold text-blue-700 transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/60"
-              >
-                Subscribe
-              </button>
-            </form>
+            <NewsletterForm />
           </div>
         </section>
       </main>

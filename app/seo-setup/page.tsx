@@ -4,6 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'SEO Setup for Google Search Console',
   description: 'Submit your robots.txt, sitemap.xml, and llms.txt files to Google Search Console and improve crawlability.',
+  alternates: { canonical: 'https://seogenpro.online/seo-setup' },
 }
 
 const checklist = [

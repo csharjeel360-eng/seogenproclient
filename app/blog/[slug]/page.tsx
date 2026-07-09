@@ -4,6 +4,21 @@ import Image from 'next/image'
 import { Calendar, User, ArrowLeft, Clock, Sparkles } from 'lucide-react'
 import { blogPostsBySlug, BLOG_POSTS } from '@/lib/blog-posts'
 
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const slug = params.slug
+  const post = blogPostsBySlug[slug]
+
+  if (!post) return {}
+
+  const url = `https://seogenpro.online/blog/${slug}`
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: { canonical: url },
+  }
+}
+
 export function generateStaticParams() {
   return BLOG_POSTS.map((p) => ({ slug: p.slug }))
 }
