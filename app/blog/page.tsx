@@ -4,9 +4,9 @@ import { BLOG_POSTS } from '@/lib/blog-posts'
 import NewsletterForm from '@/components/NewsletterForm'
 
 export const metadata = {
-  title: 'What Is llms.txt? — SEO Gen Pro Blog',
+  title: 'SEO & AI Blog | Technical SEO Guides, llms.txt Tips & Crawlability Insights',
   description:
-    'Practical guide to llms.txt: what it is, why it matters for AI search, and how to create a clear, site-level llms.txt file.',
+    'Explore expert SEO and AI visibility articles on llms.txt, technical SEO, crawlability, indexing, and modern search strategies for better discoverability.',
   alternates: { canonical: 'https://seogenpro.online/blog' },
 }
 

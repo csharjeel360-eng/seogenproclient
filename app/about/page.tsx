@@ -1,5 +1,14 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Users, Target, Heart, Award, Github, Twitter, Linkedin } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'About SEO Gen Pro',
+  description: 'Learn about SEO Gen Pro, our mission, values, and the team building free SEO tools for search engines and AI crawlers.',
+  alternates: {
+    canonical: 'https://seogenpro.online/about',
+  },
+}
 
 const team = [
   {

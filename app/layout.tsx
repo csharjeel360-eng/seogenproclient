@@ -1,12 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import { Toaster } from 'react-hot-toast'
 import { ClientRoutePrefetch } from '@/components/ClientRoutePrefetch'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
@@ -192,7 +189,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body suppressHydrationWarning={true} className={inter.className}>
+      <body suppressHydrationWarning={true} className="font-sans">
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

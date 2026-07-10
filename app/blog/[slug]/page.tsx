@@ -4,8 +4,8 @@ import Image from 'next/image'
 import { Calendar, User, ArrowLeft, Clock, Sparkles } from 'lucide-react'
 import { blogPostsBySlug, BLOG_POSTS } from '@/lib/blog-posts'
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const slug = params.slug
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
   const post = blogPostsBySlug[slug]
 
   if (!post) return {}
@@ -111,6 +111,22 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               className="prose prose-lg max-w-none prose-headings:scroll-mt-24 prose-headings:font-semibold prose-headings:text-gray-950 prose-h2:mt-10 prose-h2:text-2xl prose-h3:mt-8 prose-h3:text-xl prose-p:leading-8 prose-a:text-blue-600 hover:prose-a:text-blue-700 dark:prose-invert dark:prose-headings:text-white dark:prose-a:text-blue-400 dark:hover:prose-a:text-blue-300"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
+
+            <div className="mt-8 rounded-[1rem] border border-gray-200/80 bg-gray-50 p-5 text-sm text-gray-700 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-300">
+              <p className="font-semibold text-gray-900 dark:text-white">Useful tools</p>
+              <p className="mt-2 leading-7">
+                Need help applying this? Try our{' '}
+                <Link href="/sitemap-generator" className="font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400">
+                  Sitemap Generator
+                </Link>,{' '}
+                <Link href="/llms-generator" className="font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400">
+                  llms.txt Generator
+                </Link>, and{' '}
+                <Link href="/robots-generator" className="font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400">
+                  robots.txt Generator
+                </Link>.
+              </p>
+            </div>
 
             <aside className="mt-12 rounded-[1.25rem] border border-gray-200/80 bg-gray-50 p-6 dark:border-gray-800 dark:bg-gray-950">
               <div className="flex items-start gap-4">

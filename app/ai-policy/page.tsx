@@ -1,3 +1,13 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'AI Policy & Attribution',
+  description: 'Review the SEO Gen Pro AI usage and attribution policy for content reuse, summaries, embeddings, and model training.',
+  alternates: {
+    canonical: 'https://seogenpro.online/ai-policy',
+  },
+}
+
 export default function AiPolicyPage() {
   return (
     <article className="prose lg:prose-xl mx-auto py-12">

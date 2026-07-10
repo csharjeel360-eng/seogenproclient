@@ -13,6 +13,164 @@ export type BlogPost = {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: 'ai-search-optimization-guide',
+    title: 'AI Search Optimization: How to Increase Your Visibility in ChatGPT, Gemini & Perplexity',
+    excerpt:
+      'Learn how AI search optimization works and discover practical strategies to improve your website visibility in ChatGPT, Gemini, and Perplexity with this complete 2026 guide.',
+    author: 'sharjeel',
+    date: '2026-07-10',
+    readTime: '10 min read',
+    category: 'AI SEO',
+    image: '/images/blog/ai-crawlers.svg',
+    tags: ['AI SEO', 'Generative Engine Optimization', 'ChatGPT SEO', 'llms.txt'],
+    content: `
+      <h2>Why AI Search Optimization Matters in 2026</h2>
+      <p>Artificial intelligence is changing how people discover information online. Instead of typing short keywords into a traditional search engine, many users now ask full questions in AI assistants like ChatGPT, Gemini, and Perplexity.</p>
+      <p>This shift means website owners can no longer think about SEO only in terms of rankings. They also need to improve how their content is discovered, understood, and referenced by AI systems.</p>
+      <p>While there is no guaranteed way to “rank” inside AI assistants, there are proven practices that can make your content easier for AI models to find, interpret, and cite.</p>
+
+      <h2>What Is AI Search Optimization?</h2>
+      <p><strong>AI Search Optimization</strong> is the practice of creating and organizing content so AI-powered systems can better understand, evaluate, and reference it. It also overlaps with <strong>Generative Engine Optimization (GEO)</strong>.</p>
+      <p>It builds on traditional SEO by emphasizing:</p>
+      <ul>
+        <li>Clear, well-structured content</li>
+        <li>Accurate and trustworthy information</li>
+        <li>Strong technical SEO foundations</li>
+        <li>Helpful answers to real user questions</li>
+        <li>Crawlable and accessible pages</li>
+      </ul>
+      <p>The goal is not only to rank in a results page. It is also to become a reliable source that AI systems may use when generating responses.</p>
+
+      <h2>Why AI Search Matters</h2>
+      <p>Millions of people now use AI assistants to:</p>
+      <ul>
+        <li>Research products and services</li>
+        <li>Compare options before buying</li>
+        <li>Learn new skills and solve problems</li>
+        <li>Summarize complex information</li>
+        <li>Find trusted resources fast</li>
+      </ul>
+      <p>As AI-assisted search grows, brands that publish high-quality, authoritative content can gain visibility across more than one discovery channel.</p>
+
+      <h2>Traditional SEO vs AI Search Optimization</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Traditional SEO</th>
+            <th>AI Search Optimization</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Focuses on ranking in search results</td>
+            <td>Focuses on discoverability and usefulness for AI systems</td>
+          </tr>
+          <tr>
+            <td>Optimizes for keywords</td>
+            <td>Optimizes for topics, context, and clarity</td>
+          </tr>
+          <tr>
+            <td>Emphasizes backlinks</td>
+            <td>Emphasizes expertise, trust, and comprehensive coverage</td>
+          </tr>
+          <tr>
+            <td>Targets clicks</td>
+            <td>Targets being referenced or recommended where appropriate</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Both strategies complement each other rather than replace one another.</p>
+
+      <h2>How ChatGPT, Gemini, and Perplexity Find Information</h2>
+      <p>Different AI systems use different combinations of:</p>
+      <ul>
+        <li>Publicly available web content</li>
+        <li>Search indexes</li>
+        <li>Licensed datasets</li>
+        <li>Real-time web browsing when available</li>
+        <li>Structured website information</li>
+      </ul>
+      <p>Because these systems work differently, no single optimization technique guarantees inclusion. The best approach is to create strong, accessible content and follow solid technical SEO practices.</p>
+
+      <h2>12 Best Practices for AI Search Optimization</h2>
+
+      <h3>1. Publish Original, Helpful Content</h3>
+      <p>Create content that answers real questions with depth, accuracy, and practical examples.</p>
+
+      <h3>2. Demonstrate Experience and Expertise</h3>
+      <p>Support claims with evidence, examples, or credible references where appropriate.</p>
+
+      <h3>3. Organize Content with Clear Headings</h3>
+      <p>Use descriptive H2 and H3 headings to make your pages easy to scan and understand.</p>
+
+      <h3>4. Answer Questions Directly</h3>
+      <p>Include concise answers early, followed by deeper explanations and examples.</p>
+
+      <h3>5. Cover Topics Comprehensively</h3>
+      <p>Develop topic clusters and link related articles together so AI systems can see your expertise clearly.</p>
+
+      <h3>6. Maintain Strong Technical SEO</h3>
+      <p>Ensure your website has an XML sitemap, an updated robots.txt file, fast pages, mobile-friendly design, and HTTPS.</p>
+
+      <h3>7. Use Structured Data</h3>
+      <p>Implement Schema.org markup where relevant so search engines and AI systems can understand your content more clearly.</p>
+
+      <h3>8. Keep Content Updated</h3>
+      <p>Refresh articles regularly so they reflect the latest facts, tools, and trends.</p>
+
+      <h3>9. Improve Readability</h3>
+      <p>Use short paragraphs, bullet points, tables, and plain language to make content easier to consume.</p>
+
+      <h3>10. Build Topical Authority</h3>
+      <p>Publish multiple high-quality articles on related subjects rather than relying on isolated posts.</p>
+
+      <h3>11. Consider an llms.txt File</h3>
+      <p>An llms.txt file can help surface important documentation and resources to AI systems. While adoption is still growing, it can be part of a broader AI-readiness strategy.</p>
+
+      <h3>12. Focus on User Value</h3>
+      <p>The most sustainable strategy is to create content that genuinely helps people solve problems.</p>
+
+      <h2>Common Mistakes to Avoid</h2>
+      <ul>
+        <li>Publishing thin or repetitive content</li>
+        <li>Keyword stuffing</li>
+        <li>Misleading titles</li>
+        <li>Outdated information</li>
+        <li>Ignoring technical SEO</li>
+        <li>Poor internal linking</li>
+        <li>Slow website performance</li>
+        <li>Duplicate content</li>
+        <li>Weak source attribution</li>
+        <li>Neglecting mobile usability</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <h3>Can I rank in ChatGPT?</h3>
+      <p>There is no traditional ranking system like Google’s. However, creating trustworthy, well-structured, and useful content can increase the chances that AI systems recognize and use it.</p>
+
+      <h3>Does AI Search Replace SEO?</h3>
+      <p>No. Traditional SEO remains important. AI Search Optimization builds on it by adapting content for conversational and AI-assisted discovery.</p>
+
+      <h3>Is llms.txt Required?</h3>
+      <p>No. It is optional and still evolving. It should be seen as one part of a broader technical SEO strategy.</p>
+
+      <h3>Should I Still Create XML Sitemaps?</h3>
+      <p>Yes. XML sitemaps remain an important way to help search engines and AI systems discover your pages.</p>
+
+      <h2>Final Thoughts</h2>
+      <p>AI-powered search is changing how people discover information, but the fundamentals remain the same: publish accurate, helpful, and well-organized content.</p>
+      <p>By combining strong technical SEO, comprehensive topic coverage, and a user-first approach, you can improve your website’s visibility across both traditional search engines and AI-powered experiences.</p>
+      <p><strong>Related Resources</strong></p>
+      <ul>
+        <li>XML Sitemap Generator</li>
+        <li>robots.txt Generator</li>
+        <li>llms.txt Generator</li>
+        <li>Technical SEO Guides</li>
+        <li>AI SEO Blog Series</li>
+      </ul>
+    `,
+  },
+  {
     slug: 'introduction-to-robots-txt',
     title: 'Complete Guide to robots.txt for SEO',
     excerpt:
